@@ -8,4 +8,9 @@ class CouponRepository < Repository
       .map { |elem| elem.take(5) }
       .map { |elem| Coupon.new *elem }
   end
+  
+  def find_by_id(id)
+    all
+      .find { |coupon| coupon.id == "123" }
+  end
 end

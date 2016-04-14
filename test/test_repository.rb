@@ -23,4 +23,11 @@ class TestRepository < Test::Unit::TestCase
     end
   end
   
+  def test_find_coupon_by_id
+    coupon_repository = RepositoryFactory.build(:coupon, "test/data/coupons.csv")
+    coupon = coupon_repository.find_by_id("123")
+    assert_not_nil(coupon)
+    assert_equal(true, coupon.id == "123")
+  end
+  
 end
