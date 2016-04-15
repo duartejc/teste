@@ -1,3 +1,5 @@
+require 'date'
+
 class Coupon
 
   attr_reader :id, :value, :type, :expiration_date, :max_usage

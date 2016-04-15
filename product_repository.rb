@@ -1,4 +1,5 @@
 require_relative 'repository'
+require_relative 'product'
 
 class ProductRepository < Repository
 

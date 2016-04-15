@@ -1,4 +1,5 @@
 require_relative 'repository'
+require_relative 'order_item'
 
 class OrderItemRepository < Repository
 

@@ -17,7 +17,7 @@ class Repository
   
   private
     def load_from_source
-      raise FileNotFoundException.new("Arquivo nao encontrado") unless File.exist?(@source)
+      raise FileNotFoundException.new("Arquivo nao encontrado: #{@source}") unless File.exist?(@source)
       
       elements = @elements
       CSV.foreach(File.path(@source)) do |row|
